@@ -88,6 +88,11 @@
       margin-bottom: 15px;
   }
 
+  .CTA__button--style:hover {
+      background-color: hsl(50, 73%, 54%);
+      cursor: pointer;
+  }
+
   .about ul {
     list-style-type: none;
     padding-left: 0;
