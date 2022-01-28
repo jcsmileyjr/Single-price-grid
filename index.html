@@ -10,75 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Single Price Grid Component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    :root {
-      --Primary-Cyan: hsl(179, 62%, 43%);
-      --Primary-BrightYellow: hsl(71, 73%, 54%);
-      --Neutral-LightGray: hsl(204, 43%, 93%);
-      --Neutral-GrayishBlue: hsl(218, 22%, 67%);
-    }
-
-    body {
-      font-family: 'Karla', sans-serif;
-      font-size: 16px;
-      display: flex;
-      height: 100vh;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-areas: 
-      "content"
-      "CTA"
-      "about";
-      width: 100vw
-    }
-
-    .content {
-      grid-area: content;
-      background-color: pink;
-    }
-    .CTA {
-      grid-area: CTA;
-      background-color: aquamarine;
-    }
-    .about {
-      grid-area: about;
-      background-color: blueviolet;
-    }
-
-    @media only screen and (min-width: 600px) {
-      body {
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        height: 50%;
-        width: 50%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        "content content"
-        "CTA about";
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
   <main>
-    <div class="content">
+    <section class="content">
       <h1>Join our community</h1>
       <p class="content__gurantee--style">30-day, hassle-free money back guarantee</p>
       <p class="content__info--style">Gain access to our full library of tutorials along with expert code reviews. 
       Perfect for any developers who are serious about honing their skills.</p>
-    </div>
-    <div class="CTA">  
+      </section>
+    <section class="CTA">  
       <h2>Monthly Subscription</h2>
       <div class="CTA__subscription--container">
         <span class="CTA__dollar--style">&dollar;29</span>
@@ -86,8 +28,8 @@
       </div>
       <p class="CTA__content--style">Full access for less than &dollar;1 a day</p>
       <button class="CTA__button--style" type="button" >Sign Up</button>
-    </div>
-    <div class="about">
+    </section>
+    <section class="about">
       <h2>Why Us</h2>
       <p>Tutorials by industry experts</p>
       <p>Peer &amp; expert code review</p>
@@ -96,7 +38,7 @@
       <p>Community forum</p>
       <p>Flashcard decks</p>
       <p> New videos every week</p>      
-    </div>
+    </section>
   </main>
 </body>
 </html>
