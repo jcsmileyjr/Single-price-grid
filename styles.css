@@ -31,11 +31,12 @@
   }
   .CTA {
     grid-area: CTA;
-    background-color: aquamarine;
+    background-color: var(--Primary-Cyan);
   }
   .about {
     grid-area: about;
-    background-color: blueviolet;
+    background-color: hsl(179, 87%, 43%);
+    ;
   }
 
   section {
@@ -47,6 +48,10 @@
       color:hsl(179, 62%, 43%);
   }
 
+  h2, .CTA__dollar--style {
+      color: white;
+  }
+
   .content__gurantee--style {
       color: var(--Primary-BrightYellow);
   }
@@ -54,6 +59,32 @@
   .content__info--style {
       line-height: 1.5em;
       color: var(--Neutral-GrayishBlue);
+  }
+
+  .CTA p, .about p, .CTA__time--style {
+      color: var(--Neutral-LightGray);
+  }
+
+  .CTA__dollar--style {
+    font-size: xx-large;
+    margin-right: 10px;
+  }
+
+  .CTA__subscription--container {
+    display: flex;
+    align-items: center;
+  }
+
+  .CTA__button--style {
+      background-color: var(--Primary-BrightYellow);
+      width: 100%;
+      padding:20px 0;
+      border:none;
+      color: white;
+      box-shadow: 0px 6px 10px var(--Primary-Cyan);
+      border-radius: 6px;
+      font-size: medium;
+      margin-bottom: 15px;
   }
 
   @media only screen and (min-width: 600px) {
