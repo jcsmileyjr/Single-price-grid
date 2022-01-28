@@ -5,46 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Single Price Grid Component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --Primary-Cyan: hsl(179, 62%, 43%);
+      --Primary-BrightYellow: hsl(71, 73%, 54%);
+      --Neutral-LightGray: hsl(204, 43%, 93%);
+      --Neutral-GrayishBlue: hsl(218, 22%, 67%);
+    }
+
+    body {
+      font-family: 'Karla', sans-serif;
+      font-size: 16px;
+      display: flex;
+      height: 100vh;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: 
+      "content"
+      "CTA"
+      "about";
+      width: 100vw
+    }
+
+    .content {
+      grid-area: content;
+      background-color: pink;
+    }
+    .CTA {
+      grid-area: CTA;
+      background-color: aquamarine;
+    }
+    .about {
+      grid-area: about;
+      background-color: blueviolet;
+    }
+
+    @media only screen and (min-width: 600px) {
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        height: 50%;
+        width: 50%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "content content"
+        "CTA about";
+      }
+    }
+
   </style>
 </head>
 <body>
-  Join our community
-
-  30-day, hassle-free money back guarantee
-
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <main>
+    <div class="content">content</div>
+    <div class="CTA">cta</div>
+    <div class="about">about</div>
+  </main>
 </body>
 </html>
